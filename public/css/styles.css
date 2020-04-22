@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header.header {
+  width: 100%;
+  background: url(../img/capa-madmax2.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.navbar {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul.navbar-item {
+  display: flex;
+}
+
+ul.navbar-item li {
+  font-size: 0.8em;
+  font-weight: 600;
+
+  list-style: none;
+  margin: 0px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+ul.navbar-item li:hover {
+  color: #e4bb23;
+  cursor: pointer;
+}
+
+div.navbar-profile {
+  display: flex;
+  align-items: center;
+}
+
+div.navbar-profile:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+div.navbar-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+div.navbar-profile span {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #fff;
+}
+
+section.banner {
+  width: 100%;
+  height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+section.banner h1 {
+  margin: 0;
+  font-size: 4em;
+  color: #fff;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+section.banner ul {
+  width: 300px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+section.banner li {
+  text-transform: uppercase;
+  margin: 0 5px;
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: 200;
+}
+
+section.banner button {
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  background: #e4bb23;
+  border: 0;
+  cursor: pointer;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+section.banner button i {
+  font-size: 20px;
+}
+
+section.banner button span {
+  margin-right: 10px;
+}
+
+section.banner button:hover {
+  background: #c4a01f;
+}
+
+div.calendar span {
+  color: #fff;
+  display: block;
+  margin: 10px 0px;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+div.calendar {
+  margin-top: 60px;
+}
+
+section.banner .color-date {
+  color: #e4bb23;
+}
+
+div.hero {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 212, 255, 0) 75%
+  );
+}
+
+nav.navbar-bottom {
+  max-width: 960px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.2px solid rgb(202, 202, 202);
+}
+
+nav.navbar-bottom a {
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #e4bb23;
+  margin: 10px 15px;
+  border-bottom: 1.2px solid #f2f2f2;
+  padding: 21px 0px;
+}
+
+nav.navbar-bottom a:hover {
+  border-bottom: 1.2px solid #e4bb23;
+}
+
+main.content {
+  max-width: 960px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul.list-cards {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+li.card {
+  width: 225px;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  margin: 10px 0px;
+}
+
+li.card figure {
+  width: 100%;
+}
+
+li.card figure img {
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+
+figure {
+  position: relative;
+  left: -17%;
+  top: -4%;
+}
+
+div.details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.5s;
+}
+
+div.details-info {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+div.details-info h1 {
+  font-size: 1.3em;
+  color: #e4bb23;
+  margin-bottom: 30px;
+}
+
+li.card:hover div.details {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.details-info i {
+  font-size: 50px;
+}
+
+div.details-info i:hover {
+  cursor: pointer;
+  color: #e4bb23;
+}
+
+div.card-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+div.card-info h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 5px 0px;
+}
+
+div.card-info p {
+  display: flex;
+  flex-direction: row;
+}
+
+div.card-info p a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #e4bb23;
+  margin: 5px 0px;
+}
+
+div.card-info p a:hover {
+  text-decoration: underline;
+}
+
+div.card-recommend {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.card-recommend i {
+  font-size: 20px;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+
+div.card-recommend span {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+div.card-recommend i:hover {
+  color: #e74c3c;
+}
+
+footer {
+  margin: 0 auto;
+  display: flex;
+  height: 100px;
+  background: #fff;
+  align-items: center;
+}
+
+footer section {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.social-icons i {
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #bababa;
+}
+.twitter:hover {
+  color: #00acee;
+}
+.facebook:hover {
+  color: #3b5998;
+}
+.instagram:hover {
+  color: #fd1d1d;
+}
